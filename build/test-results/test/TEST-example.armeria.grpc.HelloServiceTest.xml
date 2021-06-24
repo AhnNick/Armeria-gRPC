@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="example.armeria.grpc.HelloServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-06-24T06:36:49" hostname="anseongjin-ui-MacBookPro.local" time="16.782">
+  <properties/>
+  <testcase name="getLotsOfReplies()" classname="example.armeria.grpc.HelloServiceTest" time="5.318"/>
+  <testcase name="blockForLotsOfReplies()" classname="example.armeria.grpc.HelloServiceTest" time="5.116"/>
+  <testcase name="getReplyWithDelay()" classname="example.armeria.grpc.HelloServiceTest" time="3.105"/>
+  <testcase name="sendLotsOfGreetings()" classname="example.armeria.grpc.HelloServiceTest" time="0.107"/>
+  <testcase name="getReplyFromServerSideBlockingCall()" classname="example.armeria.grpc.HelloServiceTest" time="3.024"/>
+  <testcase name="bidirectionalHello()" classname="example.armeria.grpc.HelloServiceTest" time="0.105"/>
+  <testcase name="getReply()" classname="example.armeria.grpc.HelloServiceTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.verboseExceptions: rate-limit=10 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.preferredIpV4Addresses:  (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.verboseSocketExceptions: false (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.verboseResponses: false (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.useEpoll: false (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.transportType: nio (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.maxNumConnections: 2147483647 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.numCommonWorkers: 24 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.numCommonBlockingTaskThreads: 200 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultMaxRequestLength: 10485760 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultMaxResponseLength: 10485760 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultRequestTimeoutMillis: 10000 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultResponseTimeoutMillis: 15000 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultConnectTimeoutMillis: 3200 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultWriteTimeoutMillis: 1000 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultServerIdleTimeoutMillis: 15000 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultClientIdleTimeoutMillis: 10000 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultPingIntervalMillis: 0 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultMaxServerNumRequestsPerConnection: 0 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultMaxClientNumRequestsPerConnection: 0 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultMaxServerConnectionAgeMillis: 0 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultMaxClientConnectionAgeMillis: 0 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultHttp2InitialConnectionWindowSize: 1048576 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultHttp2InitialStreamWindowSize: 1048576 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultHttp2MaxFrameSize: 16384 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultHttp2MaxStreamsPerConnection: 2147483647 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultHttp2MaxHeaderListSize: 8192 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultHttp1MaxInitialLineLength: 4096 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultHttp1MaxHeaderSize: 8192 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultHttp1MaxChunkSize: 8192 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultUseHttp2Preface: true (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultUseHttp1Pipelining: false (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultBackoffSpec: exponential=200:10000,jitter=0.2 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.defaultMaxTotalAttempts: 10 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.routeCache: maximumSize=4096 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.routeDecoratorCache: maximumSize=4096 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.parsedPathCache: maximumSize=4096 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.headerValueCache: maximumSize=4096 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.cachedHeaders: :authority,:scheme,:method,accept-encoding,content-type (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.fileServiceCache: maximumSize=1024 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.dnsCacheSpec: maximumSize=4096 (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.annotatedServiceExceptionVerbosity: unhandled (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.useJdkDnsResolver: false (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.reportBlockedEventLoop: true (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.validateHeaders: true (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.tlsAllowUnsafeCiphers: false (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.transientServiceOptions:  (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.useLegacyRouteDecoratorOrdering: false (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - Using nio
+[Test worker] INFO com.linecorp.armeria.server.docs.DocStringExtractor - Using com.linecorp.armeria.grpc.descriptorDir: META-INF/armeria/grpc
+[Test worker] INFO com.linecorp.armeria.common.util.SystemInfo - hostname: anseongjin-ui-macbookpro.local (from 'hostname' command)
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.useOpenSsl: true (default)
+[Test worker] INFO com.linecorp.armeria.common.Flags - Using OpenSSL: BoringSSL, 0x1010107f
+[Test worker] INFO com.linecorp.armeria.common.Flags - com.linecorp.armeria.dumpOpenSslInfo: false (default)
+[globalEventExecutor-3-1] INFO com.linecorp.armeria.internal.shaded.reflections.Reflections - Reflections took 4 ms to scan 1 urls, producing 1 keys and 1 values 
+[armeria-boss-http-*:50029] INFO com.linecorp.armeria.server.Server - Serving HTTP at /[0:0:0:0:0:0:0:0]:50029 - http://127.0.0.1:50029/
+[armeria-boss-https-*:50030] INFO com.linecorp.armeria.server.Server - Serving HTTPS at /[0:0:0:0:0:0:0:0]:50030 - https://127.0.0.1:50030/
+[Test worker] INFO com.linecorp.armeria.internal.common.JavaVersionSpecific - Using the APIs optimized for: Java 9+
+]]></system-err>
+</testsuite>
